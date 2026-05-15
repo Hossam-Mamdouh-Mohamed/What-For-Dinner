@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EliteHomes - Your Dream Home Awaits</title>
+        <link rel="stylesheet"
+            href="../Bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-white navbar-light">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="#">
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <i class="fa fa-utensils"></i>
+                            </div>
+                            <div>
+                                <h1
+                                    style="font-size: 24px; font-weight: 700;">What's
+                                    For Dinner</h1>
+                                <p style="font-size: 14px; color: #6a7282;">Your
+                                    daily meal inspiration</p>
+                            </div>
+                        </div>
+                    </a>
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                        aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul
+                            class="navbar-nav ms-auto gap-2 my-2 navbar-nav-scroll align-items-center"
+                            style="--bs-scroll-height: 100px;">
+                            <li class="nav-item"><a class="nav-link active"
+                                    aria-current="page" href="#hero-section"><i
+                                        class="fa fa-bookmark"></i></a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                    href="#featured-properties"><i
+                                        class="fa fa-clock-rotate-left"></i></a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                    href="#services-tabs"><i
+                                        class="fa fa-gear"></i></a></li>
+                            <li class="nav-item"><a class="nav-link"
+                                    href="#testimonials-tabs"><img
+                                        src="../assets/avatar-4.jpg"
+                                        style="width: 40px; border: 2px solid #ffb86a;"
+                                        class="rounded-circle" srcset></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section id="recipe-display-section" class>
+            <div class="container px-5 py-4">
+                <div class="wrapper">
+                    <div class="custom-grid">
+                        <div class="image">
+                            <img
+                                src="../assets/photo-1546069901-ba9599a7e63c.jfif"
+                                alt>
+                            <div class="rate-box d-flex">
+                                <i class="fa fa-star"></i>
+                                <p><span id="rate">4.4</span> (<span
+                                        id="reviews">198 </span> reviews)</p>
+                            </div>
+                            <div class="details d-flex">
+                                <div class="detail-item">
+                                    <i class="fa fa-clock"></i>
+                                    <p>Prep Time</p>
+                                    <p id="prep-time-display"></p>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fa fa-fire-burner"></i>
+                                    <p>Cook Time</p>
+                                    <p id="cook-time-display"></p>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fa fa-users"></i>
+                                    <p>Servings</p>
+                                    <p id="servings-display"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-card bg-white">
+                            <div class="header-content d-flex align-items-center justify-content-between">
+                                <div>
+                                    <div class="mb-3">
+                                        <span id="difficulty-badge"></span>
+                                        <span id="category-badge"></span>
+                                    </div>
+                                    <h3 id="recipe-name"></h3>
+                                    <p id="recipe-description"></p>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn"><i
+                                            class="fa fa-bookmark"></i></button>
+                                    <button class="btn"><i
+                                            class="fa fa-share-nodes"></i></button>
+                                </div>
+                            </div>
+
+                            <div id="time-warning" class="my-5">
+                                <i class="fa fa-triangle-exclamation"></i>
+                                <div>
+                                    <p id="warning-title">Extended Preparation
+                                        Time</p>
+                                    <p id="warning-description">This recipe
+                                        requires more than 45 minutes to
+                                        prepare. Plan accordingly!</p>
+                                </div>
+                            </div>
+
+                            <ul class="nav nav-pills mb-3 p-2" id="pills-tab"
+                                role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active"
+                                        id="pills-home-tab"
+                                        data-bs-toggle="pill"
+                                        data-bs-target="#pills-home"
+                                        type="button" role="tab"
+                                        aria-controls="pills-home"
+                                        aria-selected="true"><i
+                                            class="fa fa-list-check"></i><span>Ingredients</span></button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link"
+                                        id="pills-profile-tab"
+                                        data-bs-toggle="pill"
+                                        data-bs-target="#pills-profile"
+                                        type="button" role="tab"
+                                        aria-controls="pills-profile"
+                                        aria-selected="false"><i
+                                            class="fa fa-book-open"></i><span>Instructions</span></button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link"
+                                        id="pills-contact-tab"
+                                        data-bs-toggle="pill"
+                                        data-bs-target="#pills-contact"
+                                        type="button" role="tab"
+                                        aria-controls="pills-contact"
+                                        aria-selected="false"><i
+                                            class="fa fa-chart-pie"></i><span>Nutrition</span></button>
+                                </li>
+
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link"
+                                        id="pills-chef-tips-tab"
+                                        data-bs-toggle="pill"
+                                        data-bs-target="#pills-chef-tips"
+                                        type="button" role="tab"
+                                        aria-controls="pills-chef-tips"
+                                        aria-selected="false"><i
+                                            class="fa fa-lightbulb"></i><span>Chef's
+                                            Tips</span></button>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" id="pills-tabContent">
+
+                                <div class="tab-pane fade show active"
+                                    id="pills-home"
+                                    role="tabpanel"
+                                    aria-labelledby="pills-home-tab">
+
+                                    <div
+                                        class="Ingredients-content p-4 overflow-y-auto">
+                                        <ul id="Ingredients-ul"></ul>
+                                    </div>
+
+                                </div>
+
+                                <div class="tab-pane fade"
+                                    id="pills-profile"
+                                    role="tabpanel"
+                                    aria-labelledby="pills-profile-tab">
+
+                                    <div class="Instructions-content p-4 overflow-y-auto">
+                                        <ul id="Instructions-ul"></ul>
+                                    </div>
+
+                                </div>
+
+                                <div class="tab-pane fade"
+                                    id="pills-contact"
+                                    role="tabpanel"
+                                    aria-labelledby="pills-contact-tab">
+
+                                    <div class="row g-3" id="nutrition-content">
+
+                                        <div class="col-md-6">
+                                            <div class="nutrition-card">
+                                                <div class="right">
+                                                    <i class="fa fa-fire"></i>
+                                                    <span>Calories</span>
+                                                </div>
+
+                                                <div class="left">
+                                                    <span
+                                                        id="calories-value"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="nutrition-card">
+                                                <div class="right">
+                                                    <i
+                                                        class="fa fa-dumbbell"></i>
+                                                    <span>Protein</span>
+                                                </div>
+
+                                                <div class="left">
+                                                    <span
+                                                        id="protein-value"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="nutrition-card">
+                                                <div class="right">
+                                                    <i
+                                                        class="fa fa-wheat-awn"></i>
+                                                    <span>Carbohydrates</span>
+                                                </div>
+
+                                                <div class="left">
+                                                    <span
+                                                        id="carbohydrates-value"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="nutrition-card">
+                                                <div class="right">
+                                                    <i
+                                                        class="fa fa-droplet"></i>
+                                                    <span>Fat</span>
+                                                </div>
+
+                                                <div class="left">
+                                                    <span id="fat-value"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="nutrition-card">
+                                                <div class="right">
+                                                    <i
+                                                        class="fa fa-seedling"></i>
+                                                    <span>Fiber</span>
+                                                </div>
+
+                                                <div class="left">
+                                                    <span
+                                                        id="fiber-value"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="nutrition-card">
+                                                <div class="right">
+                                                    <i class="fa fa-cube"></i>
+                                                    <span>Sodium</span>
+                                                </div>
+
+                                                <div class="left">
+                                                    <span
+                                                        id="sodium-value"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="pills-chef-tips"
+                                    role="tabpanel"
+                                    aria-labelledby="pills-chef-tips-tab">
+                                    <div class="p-4 overflow-y-auto">
+                                        <ul id="chef-tips-ul"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <hr>
+                            <button id="try-another-btn"
+                                class="btn-lg border-0 my-3">
+                                <i class="fa fa fa-rotate"></i><span
+                                    class="ps-2 text">Try Another Recipe</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script
+            src="../Bootstrap/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/main.js"></script>
+    </body>
+</html>

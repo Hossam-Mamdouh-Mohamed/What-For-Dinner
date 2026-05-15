@@ -1,0 +1,385 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #9810fa;
+    --text-color: #7f22fe;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.nav-item a i {
+    font-size: 20px;
+    font-weight: 600;
+    color: #4a5565;
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#recipe-display-section {
+    background-color: #fffbeb;
+    min-height: 100vh;
+}
+
+.navbar-brand i {
+    background-image: linear-gradient(to right, #ff6900, #fb2c36);
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.wrapper {
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.custom-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.image {
+    grid-column: span 2;
+    position: relative;
+    overflow: hidden;
+    /* border-radius : 24px 0px 0px 24px; */
+    height: 750px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.details {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    background-color: #fffffff2;
+    padding: 24px;
+    border-radius: 16px;
+    justify-content: space-around;
+}
+
+.details .detail-item {
+    text-align: center;
+}
+
+.details .detail-item:nth-child(1) i {
+    color: #ff6900;
+}
+
+.details .detail-item:nth-child(2) i {
+    color: #fb2c36;
+}
+
+.details .detail-item:nth-child(3) i {
+    color: #2b7fff;
+}
+
+.details .detail-item p:first-of-type {
+    color: #6a7282;
+}
+
+.details .detail-item p:last-of-type {
+    font-size: 16px;
+    color: #101828;
+    font-weight: 700;
+}
+
+.rate-box {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 5px 10px;
+    top: 20px;
+    left: 20px;
+    align-items: center;
+    gap: 5px;
+}
+
+.rate-box>i {
+    color: gold;
+}
+
+#difficulty-badge {
+    color: #008236;
+    background-color: #dcfce7;
+    padding: 4px 12px;
+    border-radius: 16px;
+}
+
+#category-badge {
+    color: #1447e6;
+    background-color: #dbeafe;
+    padding: 4px 12px;
+    border-radius: 16px;
+}
+
+.content-card {
+    grid-column: span 3;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+#recipe-name {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+#recipe-description {
+    font-size: 18px;
+    color: #4a5565;
+}
+
+button>i {
+    color: #f54a00;
+}
+
+.btn {
+    width: 48px;
+    height: 48px;
+    background-color: #ffedd4;
+    border-radius: 12px;
+}
+
+#time-warning {
+    padding: 16px;
+    margin: 16px 0px;
+    background-color: #fef2f2;
+    border-left: 4px solid #fb2c36;
+    border-radius: 8px;
+
+}
+
+#time-warning p:first-child {
+    color: #9f0712;
+    font-weight: bold;
+}
+
+#time-warning p:last-child {
+    color: #e7000b;
+}
+
+#time-warning i {
+    font-size: 20px;
+    color: #fb2c36;
+}
+
+#pills-tab .nav-item {
+    flex: 1;
+}
+
+#pills-tab .nav-link {
+    width: 100%;
+}
+
+#pills-tab .nav-item i {
+    margin: 8px;
+}
+
+#pills-tab .nav-item i,
+#pills-tab .nav-item span {
+    color: #6a7282 !important;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#pills-tab .nav-link.active {
+    color: #f54a00;
+    border-bottom: 2px solid #f54a00;
+    background-color: inherit;
+    border-radius: 0px;
+}
+
+#pills-tab .nav-link.active i,
+#pills-tab .nav-link.active span {
+    color: #f54a00 !important;
+}
+
+#pills-tab .nav-link:hover i,
+#pills-tab .nav-link:hover span {
+    color: #364153 !important;
+}
+
+.Ingredients-content {
+    background-color: #fff7ed;
+    border-radius: 16px;
+}
+
+.nutrition-card {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fbf9fa;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.nutrition-card i {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #9f0712;
+    margin-right: 5px;
+    height: 100%;
+}
+
+#nutrition-content>div:nth-child(1) .nutrition-card i {
+    background-color: #ffedd4;
+    color: #f54a00;
+}
+
+#nutrition-content>div:nth-child(2) .nutrition-card i {
+    background-color: #dbeafe;
+    color: #155dfc;
+}
+
+#nutrition-content>div:nth-child(3) .nutrition-card i {
+    background-color: #fef3c7;
+    color: #d08700;
+}
+
+#nutrition-content>div:nth-child(4) .nutrition-card i {
+    background-color: #ffe2e2;
+    color: #e7000b;
+}
+
+#nutrition-content>div:nth-child(5) .nutrition-card i {
+    background-color: #dcfce7;
+    color: #00a63e;
+}
+
+#nutrition-content>div:nth-child(6) .nutrition-card i {
+    background-color: #fce7f3;
+    color: #e60076;
+}
+
+#try-another-btn {
+    background-image: linear-gradient(to right, #ff6900, #fb2c36);
+}
+
+#try-another-btn i,
+#try-another-btn span {
+    color: #fff !important;
+}
+
+#pills-tabContent {
+    height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+#Ingredients-ul,
+#Instructions-ul,
+#chef-tips-ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.ingredient-item,
+.instructions-item,
+.chefTips-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.ingredient-number {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #ff6b00;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instructions-number {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #ff6b00;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    font-weight: 700;
+}
+
+.instructions-number {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #ff6b00;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    font-weight: 700;
+}
+
+.chefTips-item {
+    padding: 16px;
+    border-left: #9f0712 solid 5px;
+    background-color: #d0870051;
+    border-radius: 8px;
+}
+
+#time-warning{
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+@media (max-width: 992px) {
+
+    .custom-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image {
+        grid-column: span 1;
+        height: 500px;
+    }
+
+    .content-card {
+        grid-column: span 1;
+        padding: 24px;
+    }
+
+
+    .details {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    #pills-tab .nav-link {
+        height: 100%;
+        width: 25%;
+    }
+}
